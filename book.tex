@@ -1,7 +1,7 @@
 \documentclass[12pt, a4paper, twoside]{book} % twosided document
 
 \author{Ana Lucia Castro}
-\title{\textbf{Un cuento de arte y terapia}}
+\title{\textbf{Un encuentro de arte y terapia}}
 \date{}
 
 \let\cleardoublepage=\clearpage
@@ -34,7 +34,27 @@
 \renewcommand{\chaptermark}[1]{}
 \renewcommand{\sectionmark}[1]{}
 
+\usepackage{tikz}
+\usepackage{eso-pic} % place TikZ picture on every page
+
+% Define gradient background
+\newcommand\BackgroundGradient{
+    \begin{tikzpicture}[remember picture,overlay]
+        \shade[top color=blue!20,bottom color=white] 
+            (current page.north west) rectangle (current page.south east);
+    \end{tikzpicture}
+}
+
 % ---------------- Document ----------------
+% Change the size of normal text only
+\makeatletter
+\renewcommand\normalsize{%
+   \@setfontsize\normalsize{13pt}{15pt} % font size, line spacing
+}
+\makeatother
+
+\AddToShipoutPictureBG{\BackgroundGradient}
+
 \begin{document}
 
 % Title page
@@ -55,16 +75,16 @@
 \clearpage
 
 \noindent\textbf{Hoy decido}\\
-Hoy decido ser la mujer sabia
-Hoy decido en la flor de loto estar sentada
-Hoy decido por los hombres que decidieron mi sumisión
-Hoy decido hacer pequeñito a aquello que la degrado
-Al puerco poseído mandarlo a su abismo, al doctor que sugirió acunar al patriarcado mandarlo a pastar el  ocaso de su ganado
-Hoy decido contemplar las oportunidades de mis alas
-Decido por todas aquellas esperanzas que se contemplaron en danzas, llamando por decadas para  ser escuchadas
-Como le digo a mi adolescente que de doler se cuese y que a ella le tocó esa batalla?
-Que se quede tranquila por que hoy ya no la encausan, ella venera su dignidad y no espera que un potro la monte para sentir que confirma su feminidad.
-Sostengo este malestar y en mi vientre lo modelo, moldeo como el útero que no fue creado, sostengo en mi angustia de garganta este feto y  como todas las derrotas que duelen, acepto,acepto ser lo que soy  y luego...que aparezca el espacio, la crisis, los opuestos, mientras siga eligiendome desde lo sincero, en nombre de la realidad desde lo pequeño hasta lo que se hace eterno.
+Hoy decido ser la mujer sabia\\
+Hoy decido en la flor de loto estar sentada\\
+Hoy decido por los hombres que decidieron mi sumisión\\
+Hoy decido hacer pequeñito a aquello que la degrado\\
+Al puerco poseído mandarlo a su abismo, al doctor que sugirió acunar al patriarcado mandarlo a pastar el  ocaso de su ganado\\
+Hoy decido contemplar las oportunidades de mis alas\\
+Decido por todas aquellas esperanzas que se contemplaron en danzas, llamando por decadas para  ser escuchadas\\
+Como le digo a mi adolescente que de doler se cuese y que a ella le tocó esa batalla?\\
+Que se quede tranquila por que hoy ya no la encausan, ella venera su dignidad y no espera que un potro la monte para sentir que confirma su feminidad.\\
+Sostengo este malestar y en mi vientre lo modelo, moldeo como el útero que no fue creado, sostengo en mi angustia de garganta este feto y  como todas las derrotas que duelen, acepto,acepto ser lo que soy  y luego...que aparezca el espacio, la crisis, los opuestos, mientras siga eligiendome desde lo sincero, en nombre de la realidad desde lo pequeño hasta lo que se hace eterno.\\
 Hoy elijo ser una mujer más que contempla su duelo! Que de suertes ya la baraja estaba asignada, que por esto los trucos son hoy para mi una ventaja, Por lo menos no seré la mujer que por ser madre se ve fracasada,  de sus sueños y anhelos sepultada...sino que puedo encausar mi mirada a la señora que por si misma se sostiene y elije... hoy elijo  ser resignificada!
 
 \begin{figure}[H]
@@ -79,13 +99,13 @@ Hoy elijo ser una mujer más que contempla su duelo! Que de suertes ya la baraja
 
 \clearpage
 
-\noindent\textbf{Entre lo que fui, entre lo que soy}\\
-Mientras bailaba, me sentí observada, no es que no lo haya experimentado antes, es que ahora bailo hacia adentro.
-Improvisaba pasos de los que he aprendido, sin embargo no era el mismo el cuerpo que me acompañaba, he añorando que se parezca, el cambio parace ser de atractivo a elegante.
-Míentras bailabal lo hacia por una cuerda floja, que se balanceaba entre lo que fui entre lo que soy, la línea estrecha, a lo lejos se veia  infinita.
-Mientras bailaba mis pasos requerian de más cuidado, ni para la izquierda ni muy a la derecha,por el centro y en puntas de pie, encontrando y reconociendo el nuevo ritmo.
-Hoy me sentí observada mientras bailaba y el ojo no era ni de un juez ni de un justiciero sino del que todo lo vela.
-Ya no bailaba para la atraccion ni para mis caprichos o en la ilusión, quise bailar sin ser alabada, y que mujer he visto en el espejo, se escondía de a ratos y luego se elevaba.
+\noindent\textbf{Entre la que fui, entre la que soy}\\
+Mientras bailaba, me sentí observada, no es que no lo haya experimentado antes, es que ahora bailo hacia adentro.\\
+Improvisaba pasos de los que he aprendido, sin embargo no era el mismo el cuerpo que me acompañaba, he añorando que se parezca, el cambio parace ser de atractivo a elegante.\\
+Míentras bailaba lo hacia por una cuerda floja, que se balanceaba entre lo que fui entre lo que soy, la línea estrecha, a lo lejos se veia  infinita.\\
+Mientras bailaba mis pasos requerian de más cuidado, ni para la izquierda ni muy a la derecha,por el centro y en puntas de pie, encontrando y reconociendo el nuevo ritmo.\\
+Hoy me sentí observada mientras bailaba y el ojo no era ni de un juez ni de un justiciero, sino del que todo lo vela.\\
+Ya no bailaba para la atracción ni para mis caprichos o en la ilusión, quise bailar sin ser alabada, y que mujer he visto en el espejo, se escondía de a ratos y luego se elevaba.\\
 Seguiré bailando cada una de las etapas.
 
 \clearpage
@@ -105,6 +125,9 @@ Cuenta la leyenda que un día salió la princesa de su refugio para ayudar a otr
 Quedó tan enamorada, ilusionada que no dudó en querer estar con él, y aunque él se veía diferente a su padre, añoraba con poder con ese príncipe comunicarse, fue ahí que descubrió que el no podía escuchar su voz...
 Decidió recurrir a su padre para entender la cuestión, su padre con pocas palabras el trasfondo le reveló, generaciones de mujeres solo escucharon una voz, y esa voz que ella conoce y que cuida con amor no funciona en otros reinos, sea clara la intención. Resurgió en ella tal enfado, algo que jamás había experimentado y sin pensarlo fue a ver a esa mujer, la que tanto había negado, le pregunto si habría un hechizo que revelará una nueva voz...la señora envidiosa no dudó ni un sopetón en cambiarle la voz de un ángel por una que entre hombres sea aclamada, así  fue que cambio la princesa su don por una espada.
 Que podría hacer con esa espada se preguntaba ella entusiasmada.
+
+\clearpage
+
 Hasta que volvió al encuentro con el hombre que amaba y se paró frente a él en movimientos de ataque, el príncipe esos lenguajes manejaba, así que no dudó en intentar defenderse, así danzaron juntos hasta que se hizo la noche, cansados, agotados durmieron juntos en un bote.
 Al día siguiente lo mismo, ella aceptaba ese diálogo, él no entendía, pero tampoco otro conocía.
 Duraron semanas y años, hasta que la princesa comenzó a extrañar su canjto, él ya se había acostumbrado, ella se iba marchitando en cambio.
@@ -116,6 +139,8 @@ Tras una noche de sueños que su padre velaba, apareció aquel príncipe en form
 Que deseas princesa para despertar? Deseo conocer mi esencia sin volverme a engañar.
 Entonces caminemos juntas, te voy a ayudar...y quién eres tú si puedo saberlo?
 Soy la Madre que has buscado, la madre del Universo.
+
+\clearpage
 
 \begin{figure}[H]
 	\centering
@@ -130,50 +155,31 @@ Soy la Madre que has buscado, la madre del Universo.
 \clearpage
 
 \noindent\textbf{Mujer}\\
-De sumisa a Artemisa en su mirada, de apasionada con la vida a la mansa que cuida de su morada.
-
-La que respira nuevas esperanzas y llora por la desgracia que calla,
-
-la que vive y muere en cada etapa.
-
-La que a veces se enamora de ella misma y a la vez necesita un macho alfa que la vuelva loca.
-
-La que se rige con la dignidad de una leona y es un cachorrito asustado cuando de energías extrañas se trata.
-
-La que protege como una fiera, la que necesita protección como un ambriento niño huérfano
-
-La que peca con su imaginación y de su intuición no sospecha.
-
-La que amanece en otra estratosfera recontandose sus sueños, con otra vida, otras historias.
-
-La mujer que quiere comerse al mundo y se refugia en su castillo.
-
-La que se entretiene en la muchedumbre, la que se rescata a solas entre cuentos de hadas.
-
-La mujer virgen, sabía, inmaculada, también la callejera desalmada encubriendo en sentimientos de amor necesidades desenfrenadas.
-
-La que mucho conoce y a su vez se desconoce;reprimida y empoderada.
-
-La que lucha por no hacer nada, y a la vez fluir con lo que está predestinado, la que se sumerge entre dudas acertadas.
-
-La mujer que se sintió desvalorizada y tiene el valor para ser reparada.
-
+De sumisa a Artemisa en su mirada, de apasionada con la vida a la mansa que cuida de su morada.\\
+La que respira nuevas esperanzas y llora por la desgracia que calla,\\
+la que vive y muere en cada etapa.\\
+La que a veces se enamora de ella misma y a la vez necesita un macho alfa que la vuelva loca.\\
+La que se rige con la dignidad de una leona y es un cachorrito asustado cuando de energías extrañas se trata.\\
+La que protege como una fiera, la que necesita protección como un ambriento niño huérfano\\
+La que peca con su imaginación y de su intuición no sospecha.\\
+La que amanece en otra estratosfera recontandose sus sueños, con otra vida, otras historias.\\
+La mujer que quiere comerse al mundo y se refugia en su castillo.\\
+La que se entretiene en la muchedumbre, la que se rescata a solas entre cuentos de hadas.\\
+La mujer virgen, sabía, inmaculada, también la callejera desalmada encubriendo en sentimientos de amor necesidades desenfrenadas.\\
+La que mucho conoce y a su vez se desconoce;reprimida y empoderada.\\
+La que lucha por no hacer nada, y a la vez fluir con lo que está predestinado, la que se sumerge entre dudas acertadas.\\
+La mujer que se sintió desvalorizada y tiene el valor para ser reparada.\\
 La mujer que ingiere pero no traga, que a escondidas llora un amor adolescente, una ausencia de útero que la desgarra, que sangra por otras vertientes y ni una gota de sangre la acompaña.
 
-Mujer por otros aclamada y por ella misma tan maltratada.
+\clearpage
 
-Mujer!!! Te necesito mujer!!!
-
-Reconfigurame en obras de arte, aunque sean un desastre.
-
-Háblame con la verdad, sin caretas ni dizfrases
-
-Escupeme en la cara tu odio, un sentimiento que vive y te consume en las noches, dime cuánto de infeliz eres, la que necesita reinventarse, ser escuchada, manifestarse, que todos la vean, roja como una materia que puedes manipular para bien o para mal.
-
-Alimentame con el amor que te ha sido otorgado, por el omnipotente divino, acaríciame con ese instinto materno que conoces de muchas reencarnaciones.
-
+\noindent Mujer por otros aclamada y por ella misma tan maltratada.\\
+Mujer!!! Te necesito mujer!!!\\
+Reconfigurame en obras de arte, aunque sean un desastre.\\
+Háblame con la verdad, sin caretas ni dizfrases\\
+Escupeme en la cara tu odio, un sentimiento que vive y te consume en las noches, dime cuánto de infeliz eres, la que necesita reinventarse, ser escuchada, manifestarse, que todos la vean, roja como una materia que puedes manipular para bien o para mal.\\
+Alimentame con el amor que te ha sido otorgado, por el omnipotente divino, acaríciame con ese instinto materno que conoces de muchas reencarnaciones.\\
 Sé y fundente en la nada, como opuestos que danzan y se golpean con piedad.
-
 Oh mujer, sé lo que eres, todas las diosas que en tu interior velan por ti, lo están intentando.
 
 \begin{figure}[H]
@@ -187,13 +193,13 @@ Oh mujer, sé lo que eres, todas las diosas que en tu interior velan por ti, lo 
 \end{figure}
 
 \noindent\textbf{Un poder ancestral}\\
-La nueva Lucia tiene energía,
-La nueva Lucia confía en si misma
-Se mira al espejo y una mujer ve en su reflejo
-Le gusta estar sola y agradece a la vida
-La nueva Lucia no necesita un amante, confía en el hombre que aparece distante
-Soluciona sus cosas y no teme expresarse
-Tiene padre y madre y se siente orgullosa de haber aceptado sus almas tan nobles que le dieron todo para que no se doble
+La nueva Lucia tiene energía,\\
+La nueva Lucia confía en si misma\\
+Se mira al espejo y una mujer ve en su reflejo\\
+Le gusta estar sola y agradece a la vida\\
+La nueva Lucia no necesita un amante, confía en el hombre que aparece distante\\
+Soluciona sus cosas y no teme expresarse\\
+Tiene padre y madre y se siente orgullosa de haber aceptado sus almas tan nobles, que le dieron todo para que no se doble\\
 La nueva Lucia tiene órganos fuertes, ya no hay tal confusión que detenga su misión.
 
 \clearpage
@@ -258,59 +264,52 @@ Decir que vengo de otro pueblo y no conozco ese olor, que de donde vengo tejemos
 \end{figure}
 
 \noindent\textbf{Redime a tu madre...}\\
-la mujer que llora, por no curar las penas que la atormentaban  por horas.
+La mujer que llora, por no curar las penas que la atormentaban  por horas.\\
+La mujer que fue niña con ejemplos errados, que la formó extraña para entender su alma.\\
+La mujer que de adulta no se llamo a su encuentro.\\
+La que se hizo madre abriendo la puerta sin permisos ni certezas y volcó en su hijo el hilo que había olvidado.\\
+Esa mujer herida que manipulo la vida, tocando oscuridades que fueron disimuladas...pero que en la superficie de la inconsciencia, ahi es donde estallan.\\
+Elije el arquetipo de Madre que no tuviste, reconoce su rostro de blanca inmaculada, esa que todo cura y nos brinda el nacimiento...el segundo! aquel que viene de lo eterno, desde adentro.\\
+Resguarda con abrazos la herida del pasado, un complejo viviente...sólo míralo y atiende,\\
+Como brisa fresca reflejandose en tus manos...\\
+Acuna la niña que no se sintió abrazada, como olas que irrumpen siendo partes del agua.\\
+Ayrevete  a no ser  una gota perdida, a sumergirte y entregarte al misterio.\\
+Porque en todo arte hay madres y madre dadora de vida hay una sola y justo y sin coincidencias es ELLA la que se encuentra la que abrió la fontanela, no la encontrarás en el  útero que te envolvio, sino como  la que en espiral siempre te acompañó.\\
+Redime a la madre en tu interior, de humana a sabia, de incomprendida a alabada.\\
 
-La mujer que fue niña con ejemplos errados, que la formó extraña para entender su alma.
+\clearpage
 
-La mujer que de adulta no se llamo a su encuentro.
-
-La que se hizo madre abriendo la puerta sin permisos ni certezas y volcó en su hijo el hilo que había olvidado.
-
-Esa mujer herida que manipulo la vida, tocando oscuridades que fueron disimuladas...pero que en la superficie de la inconsciencia, ahi es donde estallan.
-
-Elije el arquetipo de Madre que no tuviste, reconoce su rostro de blanca inmaculada, esa que todo cura y nos brinda el nacimiento...el segundo! aquel que viene de lo eterno, desde adentro.
-
-Resguarda con abrazos la herida del pasado, un complejo viviente...sólo míralo y atiende,
-Como brisa fresca reflejandose en tus manos...
-
-Acuna la niña que no se sintió abrazada, como olas que irrumpen siendo partes del agua.
-Ayrevete  a no ser  una gota perdida, a sumergirte y entregarte al misterio.
-
-Porque en todo arte hay madres y madre dadora de vida hay una sola y justo y sin coincidencias es ELLA la que se encuentra la que abrió la fontanela, no la encontrarás en el  útero que te envolvio, sino como  la que en espiral siempre te acompañó.
-
-Redime a la madre en tu interior, de humana a sabia, de incomprendida a alabada
-
-
-Resignifica a tu madre,
-Cambia su imagen por aquella que te cuida, que sólida en su esencia permanece.
-La que te abraza con su equilibrio, te alimenta con su satisfacción.
-Te inspira con su rostro iluminado y decora tu vida con los colores de su vestimenta.
-La que te habla con opuestos, para que te descubras adentro
-La que te sacude como un trueno y calma con agua bendita tu sed.
-Cambiala por la que se sostiene en una flor y con su fragancia te lleva a confiar en ti
-La que pone su mano en tu corazón y te renueva cada día con su amor
-Esa madre que te guía sin juzgarte por qué bien sabe lo que puedes llegar a ser
-La que expande y el veneno te extrae
-Cambia una madre por otra, ahora que puedes hacerlo
-A esa niña que no halló consuelo que se deje identificar por la madre que ha descubierto
-La Madre eterna que con la brisa de su aliento limpia años de recuerdos y la sumerge en un nuevo nacimiento.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{./images/1f81324df38bf5.jpg}
-\end{figure}
+\noindent\textbf{Resignifica a tu madre}\\
+Resignifica a tu madre,\\
+Cambia su imagen por aquella que te cuida, que sólida en su esencia permanece.\\
+La que te abraza con su equilibrio, te alimenta con su satisfacción.\\
+Te inspira con su rostro iluminado y decora tu vida con los colores de su vestimenta.\\
+La que te habla con opuestos, para que te descubras adentro\\
+La que te sacude como un trueno y calma con agua bendita tu sed.\\
+Cambiala por la que se sostiene en una flor y con su fragancia te lleva a confiar en ti\\
+La que pone su mano en tu corazón y te renueva cada día con su amor\\
+Esa madre que te guía sin juzgarte por qué bien sabe lo que puedes llegar a ser\\
+La que expande y el veneno te extrae\\
+Cambia una madre por otra, ahora que puedes hacerlo\\
+A esa niña que no halló consuelo que se deje identificar por la madre que ha descubierto\\
+La Madre eterna que con la brisa de su aliento limpia años de recuerdos y la sumerge en un nuevo nacimiento.\\
 
 \clearpage
 
 \noindent\textbf{Vuelve a casa}\\
 Que no se trata de lo que digas, hagas, muestres, leas...que sólo se trata de una toma de conciencia, y que no se confunda con la bendita ciencia, se trata de ti, de tu propia esencia, porque no encuentra quién no sabe que anda buscando y tampoco aquel que en "collages" se anda mareando. No es "vivo el momento, como me apetezca", es pura impaciencia la que va comandado y crea y des crea según la marea, para el que está muerto sirve identificarse en cadenas, un vaso de antojos y otro de soberbia, mezclada con frases de autosuficiencia y de las de ayuda llamadas coraje, con tanta ceguera que encierra una era, se sabe el culpable y no quién lo vela, porque es más difícil mirar nuestra hoguera, mejor confundirse y pagar las deudas, de haber alejado los pies de la tierra. Y  donde antepasados estaban sembrando, hoy nos toca volver y auto abrazarnos, con tanta fachada y la casa está en quiebra, mejor sería  postrarnos y entrar por la puerta, esa puerta pequeña que siempre está abierta, que quiere acercarnos a nuestra inocencia,esa que veneramos y tanto anhela, que vuelvas a casa, que adentro es el verdadero afuera.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./images/1f81324df38bf5.jpg}
+\end{figure}
+%
 % Chapter 3
 \chapter{Sostenme Padre, sostenme}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{./images/1f81324dd896f4.jpg}
+	\includegraphics[scale=0.3]{./images/1f81324dd896f4.jpg}
 \end{figure}
 
 \noindent\textbf{Despertando}\\
@@ -332,10 +331,7 @@ Quién diría que no hay una edad para morir, y que el segundo nacimiento no est
 	\includegraphics[width=\textwidth]{./images/1f81324dd99091.jpg}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{./images/1f81324ddf04ba.jpg}
-\end{figure}
+\clearpage
 
 \noindent\textbf{El hombre que seguía la luz}\\
 Felipe, el joven Felipe, conocido por pocos como Philip, o el filipino, de tez transparente y ojos grandes, con arrugas en su mueca de sonrisa torcida.
@@ -361,15 +357,8 @@ Con tu familia regresa!!!!!
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{./images/1f81324df1ed85.jpg}
+	\includegraphics[width=\textwidth]{./images/1f81324ddf04ba.jpg}
 \end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{./images/1f81324df12268.jpg}
-\end{figure}
-
-\clearpage
 
 \noindent\textbf{Como aliados}\\
 Quiero conocerme, no para encasillarme, sino para sostenerme...
@@ -392,6 +381,19 @@ Que vayan pasando por favor de a uno, en sintonía, así no me agarran despreven
 
 \begin{figure}[H]
 	\centering
+	\includegraphics[width=\textwidth]{./images/1f81324df1ed85.jpg}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./images/1f81324df12268.jpg}
+\end{figure}
+
+\clearpage
+
+
+\begin{figure}[H]
+	\centering
 	\includegraphics[width=\textwidth]{./images/1f81324df158d6.jpg}
 \end{figure}
 
@@ -407,7 +409,7 @@ Hoy celebro haber vuelto un poquito a mis tierras y guardar en esta reliquia lo 
 Y si bien muere el amor que adolesce le doy paso en mi vida al amor que sostiene.
 
 % Chapter 4
-\chapter{Symbolos de orientación}
+\chapter{Simbolos de orientación}
 
 \begin{figure}[H]
 	\centering
@@ -441,20 +443,26 @@ Porque soy ese objeto, el que muestra la verdad, en las recetas con los ingredie
 \end{figure}
 
 \noindent\textbf{Sombra}\\
-Y un dia llegue, tan elocuente, lo venia planeando, como me aparezco?, como sacudo su vida para que me atienda, me vea, me rescate, a la luz me vuelva?
-Cuando todos duermen, llamare a su puerta, le mordere sus dedos para que lo sienta, le dire te odio para que me venza, como dadora de vida camuflare mi presencia, total ya no era bueno el lazo consciente con ella, sere repetitiva y constante, le dare escenarios llenos de opuestos, pondre varios personajes tramando  un encuentro.
-Sere madre, padre, hermana, amores frescos, una amiga de infancia, todos aquellos que le despierten desconsuelo, sere tan intensa que amanecera sufriendo, deseando aquello, soportando inciertos, replanteando su dia como dos paralelos.
-No cesare en mis intentos, aunque me convenza y se mantenga lejos.
-Le dare motivos para rechazarme y seguir creyendo que todo es un cuento, pero hare hueco en la escencia primaria de lo que va muriendo.
-Y si acaso me atiende estallara la tormenta y si tiene coraje no correra a la tienda, le dejare mensajes de duendes que la velan, para que se ate fuerte y viva la experiencia,
+Y un dia llegue, tan elocuente, lo venia planeando, cómo me aparezco?, cómo sacudo su vida para que me atienda, me vea, me rescate, a la luz me vuelva?\\
+Cuando todos duermen, llamare a su puerta, le mordere sus dedos para que lo sienta, le dire te odio para que me venza, como dadora de vida camuflare mi presencia, total ya no era bueno el lazo consciente con ella, sere repetitiva y constante, le dare escenarios llenos de opuestos, pondre varios personajes tramando  un encuentro.\\
+Sere madre, padre, hermana, amores frescos, una amiga de infancia, todos aquellos que le despierten desconsuelo, sere tan intensa que amanecera sufriendo, deseando aquello, soportando inciertos, replanteando su dia como dos paralelos.\\
+No cesare en mis intentos, aunque me convenza y se mantenga lejos.\\
+Le dare motivos para rechazarme y seguir creyendo que todo es un cuento, pero hare hueco en la escencia primaria de lo que va muriendo.\\
+Y si acaso me atiende estallara la tormenta y si tiene coraje no correra a la tienda, le dejare mensajes de duendes que la velan, para que se ate fuerte y viva la experiencia,\\
 Algunos me llaman sombra, otros reminiscencia, pero si me aparezco no importa como me vean, estoy adentro tuyo, el que tiene ojos que vea.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./images/1f81324df14aba.jpg}
+\end{figure}
+
 
 % Chapter 5
 \chapter{Criaturas del arte}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{./images/1f81324dd8eef5.jpg}
+	\includegraphics[scale=0.3]{./images/1f81324dd8eef5.jpg}
 \end{figure}
 
 \begin{figure}[H]
@@ -479,13 +487,10 @@ Algunos me llaman sombra, otros reminiscencia, pero si me aparezco no importa co
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{./images/1f81324df17c98.jpg}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
 	\includegraphics[width=\textwidth]{1f81324df70a75.jpg}
 \end{figure}
+
+\clearpage
 
 \noindent\textbf{Integración}\\
 Erase una tarde, una de las tantas en que ella salía a explorar, a buscar, a perderse y entre su imaginación volverse a encontrar. Distraída en su mundo interior, sin prisa, puesto que las responsabilidades no eran su premisa. Sin rumbo entre árboles de los que muy bien  historias saben narrar, simplemente era ella, de soñadora eterna encasillada,  la del medio de tres hermanas, con los pies en otro planeta como solían llamarla, así de olvidada Julia caminaba por lugares donde raramente las personas circulaban.
@@ -499,6 +504,7 @@ Asi es como el encuentro fue desarrollado...
 El sol entregaba los últimos rayos y en una botella de cinco litros que  en manos de la pequeña Julia  fueron reflejados, así vio pecesito el aire que ya se le estaba acabando.
 Como un tambor, fue un pequeño golpe en su botellón, no podía ella ni  con su más intrépida imaginación creer que se trataba de un pez, no es lo que se suele ver en esa olvidada vía del tren.
 Sin titubeos la pequeña niña no dudo en comprender que ese día serían salvados dos partes de un mismo ser que antes de esa forma nadie los había observado, y en el océano de la integración pecesito dio el salto.
+
 
 % Chapter 6
 \chapter{Reintegrarme y entrar en acción}
@@ -520,7 +526,7 @@ Sin titubeos la pequeña niña no dudo en comprender que ese día serían salvad
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{./images/1f81324ddf1fdd.jpg}
+	\includegraphics[width=\textwidth]{./images/1f81324df17c98.jpg}
 \end{figure}
 
 % chapter 7
@@ -532,7 +538,6 @@ Sin titubeos la pequeña niña no dudo en comprender que ese día serían salvad
 
 \noindent\textbf{Sin ingridientes ni recetarios}\\
 Mama quédate tranquila que no estoy sufriendo, me estoy re descubriendo, cambiando espadas por plegarias, a veces sangran y sanan, otras gritan y callan.
-
 Mama hoy estoy llorando, por los momentos que he intentado, elegir entre dos zapatos, respirar lento en la tensión, sentirme comprendido en una discusión, tener la fortaleza de que confían en lo que soy.
 Mamá, creo estoy comprendiendo, el zapato que elegí hoy, hasta le cambio el cordón, tomo aire discutiendo, no es mío el descontento, ser fuerte ya no es mi moneda corriente, ser transparente me hace consciente, no busco apoyo de otra voz, no hay empatía que detenga el temblor.
 Mama hoy estoy al frente, y tu reflejo está en mi espejo, sigo siendo vulnerable, incomprendida, manipulable, más con los ojos brillantes, por no esconder el parecido, con tu camino recorrido.
@@ -555,5 +560,10 @@ Jacobo no pudo aceptar, a su rutina tuvo que regresar, el lazo quedó en las man
 Historias que no acontecen, que así como nacen se pierden, se pierde como ese amuleto que suerte no trae para ellos.
 Jacobo no pudo aceptar, presente no rima con ausente, aunque en rima suene muy coherente.
 Un lazo que no fue creado, no reconoce a dos extraños, aunque entre sus manos  haya circulado
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{./images/1f81324ddf1fdd.jpg}
+\end{figure}
 
 \end{document}
