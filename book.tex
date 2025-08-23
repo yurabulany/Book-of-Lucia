@@ -37,14 +37,18 @@
 \usepackage{tikz}
 \usepackage{eso-pic} % place TikZ picture on every page
 
-% Define gradient background
-\newcommand\BackgroundGradient{
-    \begin{tikzpicture}[remember picture,overlay]
-        \shade[top color=blue!20,bottom color=white] 
-            (current page.north west) rectangle (current page.south east);
-    \end{tikzpicture}
-}
+\definecolor{strongbeige}{RGB}{222,184,135} % warm, noticeable beige
+\definecolor{slightlylighter}{RGB}{238,214,175} % just slightly lighter for subtle gradient
 
+% Background gradient command
+\newcommand\BackgroundGradient{%
+  \begin{tikzpicture}[remember picture,overlay]
+    % Very subtle gradient: strong beige to slightly lighter
+    \shade[top color=strongbeige,bottom color=slightlylighter!20]
+      (current page.south west) rectangle (current page.north east);
+  \end{tikzpicture}%
+}
+%
 % ---------------- Document ----------------
 % Change the size of normal text only
 \makeatletter
@@ -169,7 +173,8 @@ La mujer virgen, sabía, inmaculada, también la callejera desalmada encubriendo
 La que mucho conoce y a su vez se desconoce;reprimida y empoderada.\\
 La que lucha por no hacer nada, y a la vez fluir con lo que está predestinado, la que se sumerge entre dudas acertadas.\\
 La mujer que se sintió desvalorizada y tiene el valor para ser reparada.\\
-La mujer que ingiere pero no traga, que a escondidas llora un amor adolescente, una ausencia de útero que la desgarra, que sangra por otras vertientes y ni una gota de sangre la acompaña.
+La mujer que ingiere pero no traga, que a escondidas llora un amor adolescente, una ausencia de útero que la desgarra, que sangra por otras vertientes y ni una gota de sangre la acompaña.\\
+Lo estamos todas juntas logrando!!!
 
 \clearpage
 
